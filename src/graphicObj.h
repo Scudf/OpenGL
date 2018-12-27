@@ -17,7 +17,9 @@ public:
 		const ShaderPtr& shader,
 		const glm::vec3& position = glm::vec3(0.0f, 0.0f, 0.0f),
 		const glm::vec3& rotation = glm::vec3(0.0f, 0.0f, 0.0f),
-		const glm::vec3& scale = glm::vec3(1.0f, 1.0f, 1.0f)) { return std::make_shared<GraphicObj>(model, shader, position, rotation, scale); }
+		const glm::vec3& scale = glm::vec3(1.0f, 1.0f, 1.0f)) {
+		return std::make_shared<GraphicObj>(model, shader, position, rotation, scale);
+	}
 
 	GraphicObj(
 		const ModelPtr& model,
@@ -166,7 +168,7 @@ public:
 		float shininess = 32.0f,
 		float saturation = 1.0f,
 		float brightness = 1.0f);
-	
+
 private:
 	ModelPtr m_model;
 	ShaderPtr m_shader;
@@ -193,4 +195,3 @@ private:
 	glm::mat4 m_matModel;
 	bool m_matModelIsDirty;
 };
-

@@ -93,7 +93,7 @@ bool GraphicScene::update(float dt)
 
 	GameScene* gs = Game::GetInstancePtr()->getGameScene();
 
-	m_matView = m_camera->getTargetViewMatrix();
+	m_matView = m_camera->getFreeViewMatrix();
 
 	m_matPersp = glm::perspective(glm::radians(m_camera->getZoom()), (GLfloat)m_width / m_height, 0.1f, 6400.0f);
 
@@ -117,7 +117,7 @@ void GraphicScene::loadTexture(const std::string &imagePath)
 	loadPng((prefix + imagePath).c_str(), texData);
 	glBindTexture(GL_TEXTURE_2D, textureID);
 
-	if(texData.alphaChannel)
+	if (texData.alphaChannel)
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, texData.width, texData.height, 0, GL_RGBA, GL_UNSIGNED_BYTE, texData.data.get());
 	else
 		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, texData.width, texData.height, 0, GL_RGB, GL_UNSIGNED_BYTE, texData.data.get());
@@ -179,9 +179,9 @@ void GraphicScene::removeObject(const GraphicObjPtr& object)
 void GraphicScene::removeObject(GraphicObj* object)
 {
 	for (std::vector<GraphicObjPtr>::iterator	it = m_objects.begin(),
-												end = m_objects.end();
-												it != end;
-												++it)
+		end = m_objects.end();
+		it != end;
+		++it)
 	{
 		if ((*it).get() == object)
 		{

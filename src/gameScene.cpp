@@ -27,7 +27,7 @@ void scroll_callback(GLFWwindow* window, double xoffset, double yoffset)
 
 GameScene::GameScene()
 	: m_firstMousePos(true)
-	, m_cameraSpeed(1000.0f)
+	, m_cameraSpeed(100.0f)
 	, m_mouseSensitivity(0.15f)
 	, m_worldMousePosition(0)
 	, m_cameraAnchor(0)
@@ -42,7 +42,9 @@ GameScene::GameScene()
 bool GameScene::initialize()
 {
 	GLFWwindow* window = Game::GetInstancePtr()->getGraphicScene()->getWindow();
-	GraphicScene*	gs = Game::GetInstancePtr()->getGraphicScene();
+	GraphicScene* gs = Game::GetInstancePtr()->getGraphicScene();
+
+	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
 	glfwSetKeyCallback(window, key_callback);
 	glfwSetCursorPosCallback(window, cursor_position_callback);
@@ -51,7 +53,8 @@ bool GameScene::initialize()
 
 	m_plane = GraphicObj::Create(gs->getModel("normPlane"), gs->getGLShader("normalsShader"));
 	m_plane->setPosition(0.0f, 0.0f, -1.0f);
-	m_plane->setDiffuseColor(glm::vec3(0.0f, 1.0f, 0.0f));
+	m_plane->setDiffuseColor(glm::vec3(0.0f, 1.0f, 1.0f));
+
 	gs->addObject(m_plane);
 
 	return true;
@@ -59,15 +62,14 @@ bool GameScene::initialize()
 
 bool GameScene::update(float dt)
 {
-
+	updateCameraPosition(dt);
 
 	return true;
 }
 
 void GameScene::updateCameraPosition(float dt)
 {
-	GraphicScene* gs = Game::GetInstancePtr()->getGraphicScene();
-	CameraPtr camera = gs->getCamera();
+	CameraPtr camera = Game::GetInstancePtr()->getGraphicScene()->getCamera();
 
 	float velocity = m_cameraSpeed * dt;
 
@@ -85,6 +87,14 @@ void GameScene::processKeyCallback(GLFWwindow* window, int key, int scancode, in
 {
 	if (key == GLFW_KEY_ESCAPE && action == GLFW_PRESS)
 		glfwSetWindowShouldClose(window, GL_TRUE);
+
+	if (key >= 0 && key < 1024)
+	{
+		if (action == GLFW_PRESS)
+			m_keys[key] = true;
+		else if (action == GLFW_RELEASE)
+			m_keys[key] = false;
+	}
 }
 
 void GameScene::processCursorPosCallback(GLFWwindow* window, double xpos, double ypos)

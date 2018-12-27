@@ -36,17 +36,17 @@ public:
 
 	inline int getWidth() const { return m_width; }
 	inline int getHeight() const { return m_height; }
-	
+
 	inline GLFWwindow* getWindow() const { return m_window; }
 	inline const CameraPtr&	getCamera() const { return m_camera; }
-	
+
 	inline GLuint getGLTexture(const std::string &imagePath) const { return m_textures.at(imagePath); }
 	inline const ShaderPtr& getGLShader(const std::string &shaderName) const { return m_shaders.at(shaderName); }
 	inline const ModelPtr& getModel(const std::string &modelName) const { return m_models.at(modelName); }
-	
+
 	inline const glm::mat4& getMatView() const { return m_matView; }
 	inline const glm::mat4& getMatPersp() const { return m_matPersp; }
-	
+
 	inline const glm::vec3& getLightDirection() const { return m_lightDirection; }
 
 	inline const glm::vec3& getLightAmbient() const { return m_lightAmbient; }
@@ -54,7 +54,7 @@ public:
 	inline const glm::vec3& getLightSpecular() const { return m_lightSpecular; }
 
 	inline bool isLightDirty() const { return m_isLightDirty; }
-	
+
 	inline void setBlockSize(float blockSize) { m_blockSize = blockSize; }
 
 	inline void setWidth(int width) { m_width = width; }
@@ -155,4 +155,3 @@ private:
 
 	std::vector<GraphicObjPtr> m_objects;
 };
-

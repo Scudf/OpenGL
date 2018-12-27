@@ -14,7 +14,7 @@ public:
 	bool update(float dt);
 
 	void updateCameraPosition(float dt);
-	
+
 	void processKeyCallback(
 		GLFWwindow* window,
 		int key,
@@ -47,7 +47,7 @@ private:
 
 	bool m_keys[1024];
 	bool m_buttons[16];
-	
+
 	bool m_firstMousePos;
 
 	float m_lastX;
@@ -61,4 +61,3 @@ private:
 	glm::vec3 m_cameraAnchor;
 	glm::vec3 m_cameraTarget;
 };
-

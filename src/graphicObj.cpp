@@ -29,7 +29,7 @@ GraphicObj::GraphicObj(
 	, m_specularTexInd(-1)
 	, m_matModel(1.0f)
 	, m_matModelIsDirty(true)
-{	
+{
 
 }
 

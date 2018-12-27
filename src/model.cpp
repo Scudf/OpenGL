@@ -41,7 +41,7 @@ bool Model::createModel4V(
 	const TexCoords& texCoords)
 {
 	std::vector<GLfloat> planeVertices;
-	
+
 	float x1 = -(anchorPoint.x * planeSize.x);
 	float y1 = -(anchorPoint.y * planeSize.y);
 
@@ -129,52 +129,52 @@ bool Model::createModel36V(
 
 		cubeVertices = {
 			// 1243 Top side
-	/*1*/	x1, y2, z1,  0.0f,  1.0f,  0.0f,  texCoords.topUV.z, texCoords.topUV.w,
-	/*2*/	x2, y2, z1,  0.0f,  1.0f,  0.0f,  texCoords.topUV.x, texCoords.topUV.w,
-	/*4*/	x2, y2, z2,  0.0f,  1.0f,  0.0f,  texCoords.topUV.x, texCoords.topUV.y,
-	/*4*/	x2, y2, z2,  0.0f,  1.0f,  0.0f,  texCoords.topUV.x, texCoords.topUV.y,
-	/*3*/	x1, y2, z2,  0.0f,  1.0f,  0.0f,  texCoords.topUV.z, texCoords.topUV.y,
-	/*1*/	x1, y2, z1,  0.0f,  1.0f,  0.0f,  texCoords.topUV.z, texCoords.topUV.w,
+			/*1*/	x1, y2, z1,  0.0f,  1.0f,  0.0f,  texCoords.topUV.z, texCoords.topUV.w,
+			/*2*/	x2, y2, z1,  0.0f,  1.0f,  0.0f,  texCoords.topUV.x, texCoords.topUV.w,
+			/*4*/	x2, y2, z2,  0.0f,  1.0f,  0.0f,  texCoords.topUV.x, texCoords.topUV.y,
+			/*4*/	x2, y2, z2,  0.0f,  1.0f,  0.0f,  texCoords.topUV.x, texCoords.topUV.y,
+			/*3*/	x1, y2, z2,  0.0f,  1.0f,  0.0f,  texCoords.topUV.z, texCoords.topUV.y,
+			/*1*/	x1, y2, z1,  0.0f,  1.0f,  0.0f,  texCoords.topUV.z, texCoords.topUV.w,
 
 			// 6578 Bottom side
-	/*5*/	x1, y1, z1,  0.0f, -1.0f,  0.0f,  texCoords.bottomUV.x, texCoords.bottomUV.w,
-	/*6*/	x2, y1, z1,  0.0f, -1.0f,  0.0f,  texCoords.bottomUV.z, texCoords.bottomUV.w,
-	/*8*/	x2, y1, z2,  0.0f, -1.0f,  0.0f,  texCoords.bottomUV.z, texCoords.bottomUV.y,
-	/*8*/	x2, y1, z2,  0.0f, -1.0f,  0.0f,  texCoords.bottomUV.z, texCoords.bottomUV.y,
-	/*7*/	x1, y1, z2,  0.0f, -1.0f,  0.0f,  texCoords.bottomUV.x, texCoords.bottomUV.y,
-	/*5*/	x1, y1, z1,  0.0f, -1.0f,  0.0f,  texCoords.bottomUV.x, texCoords.bottomUV.w,
+			/*5*/	x1, y1, z1,  0.0f, -1.0f,  0.0f,  texCoords.bottomUV.x, texCoords.bottomUV.w,
+			/*6*/	x2, y1, z1,  0.0f, -1.0f,  0.0f,  texCoords.bottomUV.z, texCoords.bottomUV.w,
+			/*8*/	x2, y1, z2,  0.0f, -1.0f,  0.0f,  texCoords.bottomUV.z, texCoords.bottomUV.y,
+			/*8*/	x2, y1, z2,  0.0f, -1.0f,  0.0f,  texCoords.bottomUV.z, texCoords.bottomUV.y,
+			/*7*/	x1, y1, z2,  0.0f, -1.0f,  0.0f,  texCoords.bottomUV.x, texCoords.bottomUV.y,
+			/*5*/	x1, y1, z1,  0.0f, -1.0f,  0.0f,  texCoords.bottomUV.x, texCoords.bottomUV.w,
 
 			// 4268 Right side
-	/*4*/	x2, y2, z2,  1.0f,  0.0f,  0.0f,  texCoords.rightUV.z, texCoords.rightUV.y,
-	/*2*/	x2, y2, z1,  1.0f,  0.0f,  0.0f,  texCoords.rightUV.z, texCoords.rightUV.w,
-	/*6*/	x2, y1, z1,  1.0f,  0.0f,  0.0f,  texCoords.rightUV.x, texCoords.rightUV.w,
-	/*6*/	x2, y1, z1,  1.0f,  0.0f,  0.0f,  texCoords.rightUV.x, texCoords.rightUV.w,
-	/*8*/	x2, y1, z2,  1.0f,  0.0f,  0.0f,  texCoords.rightUV.x, texCoords.rightUV.y,
-	/*4*/	x2, y2, z2,  1.0f,  0.0f,  0.0f,  texCoords.rightUV.z, texCoords.rightUV.y,
+			/*4*/	x2, y2, z2,  1.0f,  0.0f,  0.0f,  texCoords.rightUV.z, texCoords.rightUV.y,
+			/*2*/	x2, y2, z1,  1.0f,  0.0f,  0.0f,  texCoords.rightUV.z, texCoords.rightUV.w,
+			/*6*/	x2, y1, z1,  1.0f,  0.0f,  0.0f,  texCoords.rightUV.x, texCoords.rightUV.w,
+			/*6*/	x2, y1, z1,  1.0f,  0.0f,  0.0f,  texCoords.rightUV.x, texCoords.rightUV.w,
+			/*8*/	x2, y1, z2,  1.0f,  0.0f,  0.0f,  texCoords.rightUV.x, texCoords.rightUV.y,
+			/*4*/	x2, y2, z2,  1.0f,  0.0f,  0.0f,  texCoords.rightUV.z, texCoords.rightUV.y,
 
 			// 1375 Left side
-	/*3*/	x1, y2, z2, -1.0f,  0.0f,  0.0f,  texCoords.leftUV.x, texCoords.leftUV.y,
-	/*1*/	x1, y2, z1, -1.0f,  0.0f,  0.0f,  texCoords.leftUV.x, texCoords.leftUV.w,
-	/*5*/	x1, y1, z1, -1.0f,  0.0f,  0.0f,  texCoords.leftUV.z, texCoords.leftUV.w,
-	/*5*/	x1, y1, z1, -1.0f,  0.0f,  0.0f,  texCoords.leftUV.z, texCoords.leftUV.w,
-	/*7*/	x1, y1, z2, -1.0f,  0.0f,  0.0f,  texCoords.leftUV.z, texCoords.leftUV.y,
-	/*3*/	x1, y2, z2, -1.0f,  0.0f,  0.0f,  texCoords.leftUV.x, texCoords.leftUV.y,
+			/*3*/	x1, y2, z2, -1.0f,  0.0f,  0.0f,  texCoords.leftUV.x, texCoords.leftUV.y,
+			/*1*/	x1, y2, z1, -1.0f,  0.0f,  0.0f,  texCoords.leftUV.x, texCoords.leftUV.w,
+			/*5*/	x1, y1, z1, -1.0f,  0.0f,  0.0f,  texCoords.leftUV.z, texCoords.leftUV.w,
+			/*5*/	x1, y1, z1, -1.0f,  0.0f,  0.0f,  texCoords.leftUV.z, texCoords.leftUV.w,
+			/*7*/	x1, y1, z2, -1.0f,  0.0f,  0.0f,  texCoords.leftUV.z, texCoords.leftUV.y,
+			/*3*/	x1, y2, z2, -1.0f,  0.0f,  0.0f,  texCoords.leftUV.x, texCoords.leftUV.y,
 
 			// 3487 Front side
-	/*7*/	x1, y1, z2,  0.0f,  0.0f,  1.0f,  texCoords.frontUV.x, texCoords.frontUV.w,
-	/*8*/	x2, y1, z2,  0.0f,  0.0f,  1.0f,  texCoords.frontUV.z, texCoords.frontUV.w,
-	/*4*/	x2, y2, z2,  0.0f,  0.0f,  1.0f,  texCoords.frontUV.z, texCoords.frontUV.y,
-	/*4*/	x2, y2, z2,  0.0f,  0.0f,  1.0f,  texCoords.frontUV.z, texCoords.frontUV.y,
-	/*3*/	x1, y2, z2,  0.0f,  0.0f,  1.0f,  texCoords.frontUV.x, texCoords.frontUV.y,
-	/*7*/	x1, y1, z2,  0.0f,  0.0f,  1.0f,  texCoords.frontUV.x, texCoords.frontUV.w,
+			/*7*/	x1, y1, z2,  0.0f,  0.0f,  1.0f,  texCoords.frontUV.x, texCoords.frontUV.w,
+			/*8*/	x2, y1, z2,  0.0f,  0.0f,  1.0f,  texCoords.frontUV.z, texCoords.frontUV.w,
+			/*4*/	x2, y2, z2,  0.0f,  0.0f,  1.0f,  texCoords.frontUV.z, texCoords.frontUV.y,
+			/*4*/	x2, y2, z2,  0.0f,  0.0f,  1.0f,  texCoords.frontUV.z, texCoords.frontUV.y,
+			/*3*/	x1, y2, z2,  0.0f,  0.0f,  1.0f,  texCoords.frontUV.x, texCoords.frontUV.y,
+			/*7*/	x1, y1, z2,  0.0f,  0.0f,  1.0f,  texCoords.frontUV.x, texCoords.frontUV.w,
 
 			// 2156 Back side
-	/*5*/	x1, y1, z1,  0.0f,  0.0f, -1.0f,  texCoords.backUV.z, texCoords.backUV.w,
-	/*6*/	x2, y1, z1,  0.0f,  0.0f, -1.0f,  texCoords.backUV.x, texCoords.backUV.w,
-	/*2*/	x2, y2, z1,  0.0f,  0.0f, -1.0f,  texCoords.backUV.x, texCoords.backUV.y,
-	/*2*/	x2, y2, z1,  0.0f,  0.0f, -1.0f,  texCoords.backUV.x, texCoords.backUV.y,
-	/*1*/	x1, y2, z1,  0.0f,  0.0f, -1.0f,  texCoords.backUV.z, texCoords.backUV.y,
-	/*5*/	x1, y1, z1,  0.0f,  0.0f, -1.0f,  texCoords.backUV.z, texCoords.backUV.w
+			/*5*/	x1, y1, z1,  0.0f,  0.0f, -1.0f,  texCoords.backUV.z, texCoords.backUV.w,
+			/*6*/	x2, y1, z1,  0.0f,  0.0f, -1.0f,  texCoords.backUV.x, texCoords.backUV.w,
+			/*2*/	x2, y2, z1,  0.0f,  0.0f, -1.0f,  texCoords.backUV.x, texCoords.backUV.y,
+			/*2*/	x2, y2, z1,  0.0f,  0.0f, -1.0f,  texCoords.backUV.x, texCoords.backUV.y,
+			/*1*/	x1, y2, z1,  0.0f,  0.0f, -1.0f,  texCoords.backUV.z, texCoords.backUV.y,
+			/*5*/	x1, y1, z1,  0.0f,  0.0f, -1.0f,  texCoords.backUV.z, texCoords.backUV.w
 		};
 
 		break;
@@ -197,52 +197,52 @@ bool Model::createModel36V(
 
 		cubeVertices = {
 			// 1243 Top side
-	/*1*/	x1, y2, z1,  0.0f,  1.0f,  0.0f,
-	/*2*/	x2, y2, z1,  0.0f,  1.0f,  0.0f,
-	/*4*/	x2, y2, z2,  0.0f,  1.0f,  0.0f,
-	/*4*/	x2, y2, z2,  0.0f,  1.0f,  0.0f,
-	/*3*/	x1, y2, z2,  0.0f,  1.0f,  0.0f,
-	/*1*/	x1, y2, z1,  0.0f,  1.0f,  0.0f,
+			/*1*/	x1, y2, z1,  0.0f,  1.0f,  0.0f,
+			/*2*/	x2, y2, z1,  0.0f,  1.0f,  0.0f,
+			/*4*/	x2, y2, z2,  0.0f,  1.0f,  0.0f,
+			/*4*/	x2, y2, z2,  0.0f,  1.0f,  0.0f,
+			/*3*/	x1, y2, z2,  0.0f,  1.0f,  0.0f,
+			/*1*/	x1, y2, z1,  0.0f,  1.0f,  0.0f,
 
 			// 6578 Bottom side
-	/*5*/	x1, y1, z1,  0.0f, -1.0f,  0.0f,
-	/*6*/	x2, y1, z1,  0.0f, -1.0f,  0.0f,
-	/*8*/	x2, y1, z2,  0.0f, -1.0f,  0.0f,
-	/*8*/	x2, y1, z2,  0.0f, -1.0f,  0.0f,
-	/*7*/	x1, y1, z2,  0.0f, -1.0f,  0.0f,
-	/*5*/	x1, y1, z1,  0.0f, -1.0f,  0.0f,
-		
+			/*5*/	x1, y1, z1,  0.0f, -1.0f,  0.0f,
+			/*6*/	x2, y1, z1,  0.0f, -1.0f,  0.0f,
+			/*8*/	x2, y1, z2,  0.0f, -1.0f,  0.0f,
+			/*8*/	x2, y1, z2,  0.0f, -1.0f,  0.0f,
+			/*7*/	x1, y1, z2,  0.0f, -1.0f,  0.0f,
+			/*5*/	x1, y1, z1,  0.0f, -1.0f,  0.0f,
+
 			// 4268 Right side
-	/*4*/	x2, y2, z2,  1.0f,  0.0f,  0.0f,
-	/*2*/	x2, y2, z1,  1.0f,  0.0f,  0.0f,
-	/*6*/	x2, y1, z1,  1.0f,  0.0f,  0.0f,
-	/*6*/	x2, y1, z1,  1.0f,  0.0f,  0.0f,
-	/*8*/	x2, y1, z2,  1.0f,  0.0f,  0.0f,
-	/*4*/	x2, y2, z2,  1.0f,  0.0f,  0.0f,
-		
+			/*4*/	x2, y2, z2,  1.0f,  0.0f,  0.0f,
+			/*2*/	x2, y2, z1,  1.0f,  0.0f,  0.0f,
+			/*6*/	x2, y1, z1,  1.0f,  0.0f,  0.0f,
+			/*6*/	x2, y1, z1,  1.0f,  0.0f,  0.0f,
+			/*8*/	x2, y1, z2,  1.0f,  0.0f,  0.0f,
+			/*4*/	x2, y2, z2,  1.0f,  0.0f,  0.0f,
+
 			// 1375 Left side
-	/*3*/	x1, y2, z2, -1.0f,  0.0f,  0.0f,
-	/*1*/	x1, y2, z1, -1.0f,  0.0f,  0.0f,
-	/*5*/	x1, y1, z1, -1.0f,  0.0f,  0.0f,
-	/*5*/	x1, y1, z1, -1.0f,  0.0f,  0.0f,
-	/*7*/	x1, y1, z2, -1.0f,  0.0f,  0.0f,
-	/*3*/	x1, y2, z2, -1.0f,  0.0f,  0.0f,
-		
+			/*3*/	x1, y2, z2, -1.0f,  0.0f,  0.0f,
+			/*1*/	x1, y2, z1, -1.0f,  0.0f,  0.0f,
+			/*5*/	x1, y1, z1, -1.0f,  0.0f,  0.0f,
+			/*5*/	x1, y1, z1, -1.0f,  0.0f,  0.0f,
+			/*7*/	x1, y1, z2, -1.0f,  0.0f,  0.0f,
+			/*3*/	x1, y2, z2, -1.0f,  0.0f,  0.0f,
+
 			// 3487 Front side
-	/*7*/	x1, y1, z2,  0.0f,  0.0f,  1.0f,
-	/*8*/	x2, y1, z2,  0.0f,  0.0f,  1.0f,
-	/*4*/	x2, y2, z2,  0.0f,  0.0f,  1.0f,
-	/*4*/	x2, y2, z2,  0.0f,  0.0f,  1.0f,
-	/*3*/	x1, y2, z2,  0.0f,  0.0f,  1.0f,
-	/*7*/	x1, y1, z2,  0.0f,  0.0f,  1.0f,
-		
+			/*7*/	x1, y1, z2,  0.0f,  0.0f,  1.0f,
+			/*8*/	x2, y1, z2,  0.0f,  0.0f,  1.0f,
+			/*4*/	x2, y2, z2,  0.0f,  0.0f,  1.0f,
+			/*4*/	x2, y2, z2,  0.0f,  0.0f,  1.0f,
+			/*3*/	x1, y2, z2,  0.0f,  0.0f,  1.0f,
+			/*7*/	x1, y1, z2,  0.0f,  0.0f,  1.0f,
+
 			// 2156 Back side
-	/*5*/	x1, y1, z1,  0.0f,  0.0f, -1.0f,
-	/*6*/	x2, y1, z1,  0.0f,  0.0f, -1.0f,
-	/*2*/	x2, y2, z1,  0.0f,  0.0f, -1.0f,
-	/*2*/	x2, y2, z1,  0.0f,  0.0f, -1.0f,
-	/*1*/	x1, y2, z1,  0.0f,  0.0f, -1.0f,
-	/*5*/	x1, y1, z1,  0.0f,  0.0f, -1.0f	  
+			/*5*/	x1, y1, z1,  0.0f,  0.0f, -1.0f,
+			/*6*/	x2, y1, z1,  0.0f,  0.0f, -1.0f,
+			/*2*/	x2, y2, z1,  0.0f,  0.0f, -1.0f,
+			/*2*/	x2, y2, z1,  0.0f,  0.0f, -1.0f,
+			/*1*/	x1, y2, z1,  0.0f,  0.0f, -1.0f,
+			/*5*/	x1, y1, z1,  0.0f,  0.0f, -1.0f
 		};
 
 		break;
@@ -265,52 +265,52 @@ bool Model::createModel36V(
 
 		cubeVertices = {
 			// 1243 Top side
-	/*1*/	x1, y2, z1,
-	/*2*/	x2, y2, z1,
-	/*4*/	x2, y2, z2,
-	/*4*/	x2, y2, z2,
-	/*3*/	x1, y2, z2,
-	/*1*/	x1, y2, z1,
+			/*1*/	x1, y2, z1,
+			/*2*/	x2, y2, z1,
+			/*4*/	x2, y2, z2,
+			/*4*/	x2, y2, z2,
+			/*3*/	x1, y2, z2,
+			/*1*/	x1, y2, z1,
 
 			// 6578 Bottom side
-	/*5*/	x1, y1, z1,
-	/*6*/	x2, y1, z1,
-	/*8*/	x2, y1, z2,
-	/*8*/	x2, y1, z2,
-	/*7*/	x1, y1, z2,
-	/*5*/	x1, y1, z1,
+			/*5*/	x1, y1, z1,
+			/*6*/	x2, y1, z1,
+			/*8*/	x2, y1, z2,
+			/*8*/	x2, y1, z2,
+			/*7*/	x1, y1, z2,
+			/*5*/	x1, y1, z1,
 
 			// 4268 Right side
-	/*4*/	x2, y2, z2,
-	/*2*/	x2, y2, z1,
-	/*6*/	x2, y1, z1,
-	/*6*/	x2, y1, z1,
-	/*8*/	x2, y1, z2,
-	/*4*/	x2, y2, z2,
+			/*4*/	x2, y2, z2,
+			/*2*/	x2, y2, z1,
+			/*6*/	x2, y1, z1,
+			/*6*/	x2, y1, z1,
+			/*8*/	x2, y1, z2,
+			/*4*/	x2, y2, z2,
 
 			// 1375 Left side
-	/*3*/	x1, y2, z2,
-	/*1*/	x1, y2, z1,
-	/*5*/	x1, y1, z1,
-	/*5*/	x1, y1, z1,
-	/*7*/	x1, y1, z2,
-	/*3*/	x1, y2, z2,
+			/*3*/	x1, y2, z2,
+			/*1*/	x1, y2, z1,
+			/*5*/	x1, y1, z1,
+			/*5*/	x1, y1, z1,
+			/*7*/	x1, y1, z2,
+			/*3*/	x1, y2, z2,
 
 			// 3487 Front side
-	/*7*/	x1, y1, z2,
-	/*8*/	x2, y1, z2,
-	/*4*/	x2, y2, z2,
-	/*4*/	x2, y2, z2,
-	/*3*/	x1, y2, z2,
-	/*7*/	x1, y1, z2,
+			/*7*/	x1, y1, z2,
+			/*8*/	x2, y1, z2,
+			/*4*/	x2, y2, z2,
+			/*4*/	x2, y2, z2,
+			/*3*/	x1, y2, z2,
+			/*7*/	x1, y1, z2,
 
 			// 2156 Back side
-	/*5*/	x1, y1, z1,
-	/*6*/	x2, y1, z1,
-	/*2*/	x2, y2, z1,
-	/*2*/	x2, y2, z1,
-	/*1*/	x1, y2, z1,
-	/*5*/	x1, y1, z1
+			/*5*/	x1, y1, z1,
+			/*6*/	x2, y1, z1,
+			/*2*/	x2, y2, z1,
+			/*2*/	x2, y2, z1,
+			/*1*/	x1, y2, z1,
+			/*5*/	x1, y1, z1
 		};
 
 		break;

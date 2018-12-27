@@ -41,7 +41,9 @@ public:
 		glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f),
 		float yaw = -90.0f,
 		float pitch = 0.0f,
-		float zoom = 45.0f) { return std::make_shared<Camera>(position, up, yaw, pitch, zoom); }
+		float zoom = 45.0f) {
+		return std::make_shared<Camera>(position, up, yaw, pitch, zoom);
+	}
 
 	static CameraPtr Create(
 		float posX,
@@ -52,19 +54,20 @@ public:
 		float upZ,
 		float yaw,
 		float pitch,
-		float zoom = 45.0f) { return std::make_shared<Camera>(posX, posY, posZ, upX, upY, upZ, yaw, pitch, zoom); }
+		float zoom = 45.0f) {
+		return std::make_shared<Camera>(posX, posY, posZ, upX, upY, upZ, yaw, pitch, zoom);
+	}
 
 	void updateCameraVectors();
 
 	inline glm::mat4 getFreeViewMatrix() const { return glm::lookAt(m_position, m_position + m_front, m_up); }
-	inline glm::mat4 getTargetViewMatrix() const { return glm::lookAt(m_position, m_target, m_up); }
 
 	inline const glm::vec3& getPosition() const { return m_position; }
 	inline const glm::vec3& getFront() const { return m_front; }
 	inline const glm::vec3& getUp() const { return m_up; }
 	inline const glm::vec3& getRight() const { return m_right; }
 	inline const glm::vec3& getWorldUp() const { return m_worldUp; }
-	
+
 	inline float getYaw() const { return m_yaw; }
 	inline float getPitch() const { return m_pitch; }
 	inline float getZoom() const { return m_zoom; }
@@ -103,7 +106,7 @@ public:
 
 	inline void setYaw(float yaw) { m_yaw = yaw; }
 	inline void setPitch(float pitch) { m_pitch = pitch; }
-	inline void setZoom(float zoom)	{ m_zoom = zoom; }
+	inline void setZoom(float zoom) { m_zoom = zoom; }
 
 private:
 	glm::vec3 m_position;
@@ -117,4 +120,3 @@ private:
 	float m_pitch;
 	float m_zoom;
 };
-

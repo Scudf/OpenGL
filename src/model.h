@@ -66,7 +66,7 @@ public:
 	static ModelPtr Create() { return std::make_shared<Model>(); }
 
 	Model();
-	
+
 	bool createModel2V(
 		const glm::vec2& lineLenght = glm::vec2(1.0f, 1.0f),
 		const glm::vec2& anchorPoint = glm::vec2(0.0f, 0.0f));
@@ -107,4 +107,3 @@ private:
 
 	Bounds m_bounds;
 };
-

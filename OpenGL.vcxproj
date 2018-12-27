@@ -21,7 +21,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{99B2C19B-B03A-486F-9DA9-5E121214BA00}</ProjectGuid>
-    <RootNamespace>Minesweeper</RootNamespace>
+    <RootNamespace>OpenGL</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <ProjectName>OpenGL</ProjectName>
   </PropertyGroup>
@@ -129,33 +129,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Camera.cpp" />
-    <ClCompile Include="src\Game.cpp" />
-    <ClCompile Include="src\GameScene.cpp" />
-    <ClCompile Include="src\GraphicObj.cpp" />
-    <ClCompile Include="src\GraphicScene.cpp" />
-    <ClCompile Include="src\OpenGL.cpp" />
-    <ClCompile Include="src\Model.cpp" />
-    <ClCompile Include="src\pngLoader.cpp" />
-    <ClCompile Include="src\Shader.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="src\Camera.h" />
-    <ClInclude Include="src\Game.h" />
-    <ClInclude Include="src\GameScene.h" />
-    <ClInclude Include="src\GraphicObj.h" />
-    <ClInclude Include="src\GraphicScene.h" />
-    <ClInclude Include="src\Model.h" />
-    <ClInclude Include="src\pngLoader.h" />
-    <ClInclude Include="src\Shader.h" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="res\shaders\normalsShaderF.glsl" />
     <None Include="res\shaders\normalsShaderV.glsl" />
     <None Include="res\shaders\simpleShaderF.glsl" />
     <None Include="res\shaders\simpleShaderV.glsl" />
     <None Include="res\shaders\texturesShaderF.glsl" />
     <None Include="res\shaders\texturesShaderV.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\camera.cpp" />
+    <ClCompile Include="src\game.cpp" />
+    <ClCompile Include="src\gameScene.cpp" />
+    <ClCompile Include="src\graphicObj.cpp" />
+    <ClCompile Include="src\graphicScene.cpp" />
+    <ClCompile Include="src\model.cpp" />
+    <ClCompile Include="src\openGL.cpp" />
+    <ClCompile Include="src\pngLoader.cpp" />
+    <ClCompile Include="src\shader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\camera.h" />
+    <ClInclude Include="src\game.h" />
+    <ClInclude Include="src\gameScene.h" />
+    <ClInclude Include="src\graphicObj.h" />
+    <ClInclude Include="src\graphicScene.h" />
+    <ClInclude Include="src\model.h" />
+    <ClInclude Include="src\pngLoader.h" />
+    <ClInclude Include="src\shader.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

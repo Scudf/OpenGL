@@ -25,4 +25,6 @@ private:
 	static Game* s_instance;
 
 	float m_lastFrameTime;
+	float m_timer;
+	int m_framesCount;
 };
